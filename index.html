@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Контейнер для анимации частиц (светлячков) -->
     <div class="particle-effect" id="particles"></div>
+
     <div class="deck-container" id="deck-container">
         <div class="deck" id="deck" onclick="drawCard()">
             <img src="DeckCoverImage.png" alt="Deck Cover" class="deck-image">
@@ -16,6 +18,7 @@
             </div>
         </div>
     </div>
+
     <div class="card-container" id="card-container">
         <div class="card" id="card">
             <img src="cardTemplate.png" alt="Card Template" class="card-template">
@@ -24,6 +27,7 @@
             <button id="close-deck-button" onclick="closeDeck()">Закрыть колоду</button>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
