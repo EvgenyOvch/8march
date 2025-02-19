@@ -60,6 +60,21 @@ body {
     margin: 0 auto;
 }
 
+#next-card-button {
+    background-color: #7f8c8d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#next-card-button:hover {
+    background-color: #95a5a6;
+}
+
 .particle-effect {
     position: absolute;
     top: 0;
