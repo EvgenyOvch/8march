@@ -16,7 +16,7 @@ body {
     position: relative;
     opacity: 0;
     transform: scale(0);
-    animation: openDeckAnimation 1s forwards; /* Анимация открытия колоды */
+    animation: openDeckAnimation 1s forwards; /* Анимация появления колоды */
 }
 
 @keyframes openDeckAnimation {
@@ -33,8 +33,7 @@ body {
 .deck {
     position: relative;
     cursor: pointer;
-    transform-origin: center center;
-    animation: openCardAnimation 1s ease-in-out forwards; /* Анимация колоды */
+    animation: openCardAnimation 1s ease-in-out forwards; /* Анимация поворота колоды */
 }
 
 @keyframes openCardAnimation {
