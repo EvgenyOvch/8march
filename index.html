@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="particle-effect"></div>
-    <div class="deck-container">
+    <div class="deck-container" id="deck-container">
         <div class="deck" id="deck">
             <img src="DeckCoverImage.png" alt="Deck Cover" class="deck-image">
             <div class="instructions">
@@ -21,6 +21,8 @@
             <p id="question"></p>
             <!-- Кнопка для перехода к следующей карте -->
             <button id="next-card-button" onclick="drawCard()">Следующая карта</button>
+            <!-- Кнопка для закрытия колоды и возврата на начальную позицию -->
+            <button id="close-deck-button" onclick="closeDeck()">Закрыть колоду</button>
         </div>
     </div>
     <script src="script.js"></script>
