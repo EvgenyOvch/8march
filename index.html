@@ -12,7 +12,7 @@
         <div class="deck" id="deck" onclick="drawCard()">
             <img src="DeckCoverImage.png" alt="Deck Cover" class="deck-image">
             <div class="instructions">
-                <button id="draw-card-button" onclick="drawCard()">Нажми, чтобы вытянуть карту</button>
+                <button id="draw-card-button" onclick="drawCard(event)">Нажми, чтобы вытянуть карту</button>
             </div>
         </div>
     </div>
@@ -20,9 +20,7 @@
         <div class="card" id="card">
             <img src="cardTemplate.png" alt="Card Template" class="card-template">
             <p id="question"></p>
-            <!-- Кнопка для перехода к следующей карте -->
             <button id="next-card-button" onclick="drawCard()">Следующая карта</button>
-            <!-- Кнопка для закрытия колоды и возврата на начальную позицию -->
             <button id="close-deck-button" onclick="closeDeck()">Закрыть колоду</button>
         </div>
     </div>
