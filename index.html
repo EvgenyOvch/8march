@@ -9,10 +9,10 @@
 <body>
     <div class="particle-effect"></div>
     <div class="deck-container" id="deck-container">
-        <div class="deck" id="deck">
+        <div class="deck" id="deck" onclick="drawCard()">
             <img src="DeckCoverImage.png" alt="Deck Cover" class="deck-image">
             <div class="instructions">
-                <p>Нажми, чтобы вытянуть карту</p>
+                <button id="draw-card-button" onclick="drawCard()">Нажми, чтобы вытянуть карту</button>
             </div>
         </div>
     </div>
