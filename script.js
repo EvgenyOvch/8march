@@ -124,6 +124,7 @@ document.getElementById('deck').addEventListener('click', () => {
     drawCard();
 });
 
+// Показать карту
 function drawCard() {
     if (unusedQuestions.length === 0) {
         resetDeck();
@@ -137,11 +138,13 @@ function drawCard() {
     document.getElementById('card-container').style.display = 'block';
 }
 
+// Сброс колоды
 function resetDeck() {
     unusedQuestions = [...questions];
 }
 
-function closeCard() {
+// Закрыть колоду и вернуться к стартовой странице
+function closeDeck() {
     document.getElementById('card-container').style.display = 'none';
     document.querySelector('.deck-container').style.display = 'flex';
 }
