@@ -1,68 +1,26 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Женская магия 2.0</title>
-    <style>
-        body {
-            background: linear-gradient(to bottom, #8A2BE2, #FF69B4);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .deck {
-            background: white;
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            cursor: pointer;
-        }
-        .card {
-            background: white;
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            display: none;
-        }
-    </style>
+    <title>Magic Card Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="deck" onclick="drawCard()">
-        Нажмите, чтобы вытянуть карту
+    <div class="particle-effect"></div>
+    <div class="deck-container">
+        <div class="deck" id="deck">
+            <img src="deck-cover.jpg" alt="Deck Cover" class="deck-image">
+            <div class="instructions">
+                <p>Click to draw a card</p>
+            </div>
+        </div>
     </div>
-    <div class="card" id="card">
-        <p id="question"></p>
+    <div class="card-container" id="card-container">
+        <div class="card" id="card">
+            <p id="question"></p>
+        </div>
     </div>
-
-    <script>
-        const questions = [
-            "Если бы ты могла загадать одно желание на 8 марта, что бы это было?",
-            "Какой твой идеальный способ провести день, полностью посвящённый тебе?",
-            "Если бы ты могла стать супергероем на один день, какие бы у тебя были силы?",
-            // Добавьте остальные вопросы
-        ];
-
-        function drawCard() {
-            const deck = document.querySelector('.deck');
-            const card = document.getElementById('card');
-            const questionElement = document.getElementById('question');
-
-            if (deck.style.display !== 'none') {
-                const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
-                questionElement.textContent = randomQuestion;
-                deck.style.display = 'none';
-                card.style.display = 'block';
-            } else {
-                deck.style.display = 'block';
-                card.style.display = 'none';
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
