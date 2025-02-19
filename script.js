@@ -149,3 +149,26 @@ function closeDeck() {
     document.querySelector('.card-container').classList.remove('show');
     document.querySelector('.deck-container').classList.remove('hide');
 }
+
+// Функция для создания светлячков
+function createFireflies() {
+    const particlesContainer = document.getElementById('particles');
+    const numberOfParticles = 100; // Количество светлячков
+    for (let i = 0; i < numberOfParticles; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        particlesContainer.appendChild(particle);
+
+        // Устанавливаем случайные параметры для движения
+        const x = Math.random() * 2000 - 1000; // Случайное смещение по оси X
+        const y = Math.random() * 2000 - 1000; // Случайное смещение по оси Y
+        particle.style.setProperty('--x', `${x}px`);
+        particle.style.setProperty('--y', `${y}px`);
+
+        // Задержка анимации для каждого светлячка
+        particle.style.animationDelay = `${Math.random() * 3}s`;
+    }
+}
+
+// Запуск анимации светлячков
+createFireflies();
