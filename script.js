@@ -134,9 +134,9 @@ function drawCard(event) {
     currentCard = question;
     document.getElementById('question').textContent = question;
 
-    // Анимация: скрываем колоду и показываем карту
-    document.querySelector('.deck-container').style.display = 'none';
-    document.getElementById('card-container').style.display = 'block';
+    // Анимация: скрываем колоду и показываем карту с вопросом
+    document.querySelector('.deck-container').classList.add('hide');
+    document.querySelector('.card-container').classList.add('show');
 }
 
 // Сброс колоды
@@ -146,6 +146,6 @@ function resetDeck() {
 
 // Закрыть колоду и вернуться на начальную страницу
 function closeDeck() {
-    document.getElementById('card-container').style.display = 'none';
-    document.querySelector('.deck-container').style.display = 'flex';
+    document.querySelector('.card-container').classList.remove('show');
+    document.querySelector('.deck-container').classList.remove('hide');
 }
