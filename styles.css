@@ -14,26 +14,20 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
-    opacity: 0;
-    transform: scale(0);
-    animation: openDeckAnimation 1s forwards; /* Анимация появления колоды */
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease, transform 1s ease; /* Плавный переход */
 }
 
-@keyframes openDeckAnimation {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+.deck-container.hide {
+    opacity: 0;
+    transform: scale(0.1);
 }
 
 .deck {
     position: relative;
     cursor: pointer;
-    animation: openCardAnimation 1s ease-in-out forwards; /* Анимация поворота колоды */
+    animation: openCardAnimation 1s ease-in-out forwards; /* Анимация колоды */
 }
 
 @keyframes openCardAnimation {
@@ -88,6 +82,14 @@ body {
     width: 70%;
     text-align: center;
     z-index: 10;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.card-container.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .card {
