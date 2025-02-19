@@ -60,7 +60,8 @@ body {
     margin: 0 auto;
 }
 
-#next-card-button {
+#next-card-button,
+#close-deck-button {
     background-color: #7f8c8d;
     color: white;
     border: none;
@@ -71,7 +72,8 @@ body {
     margin-top: 20px;
 }
 
-#next-card-button:hover {
+#next-card-button:hover,
+#close-deck-button:hover {
     background-color: #95a5a6;
 }
 
