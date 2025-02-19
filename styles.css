@@ -1,0 +1,72 @@
+/* styles.css */
+body {
+    background: linear-gradient(to bottom, purple, pink);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+.deck-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.deck {
+    position: relative;
+    cursor: pointer;
+}
+
+.deck-image {
+    width: 300px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.instructions {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card-container {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    text-align: center;
+    z-index: 10;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.particle-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('particles.gif') center center no-repeat;
+    pointer-events: none;
+    opacity: 0.5;
+}
