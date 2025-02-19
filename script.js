@@ -117,14 +117,11 @@ const questions = [
     "Какую роль играют женщины в твоей жизни?"
 ];
 
+
 let unusedQuestions = [...questions];
 let currentCard = null;
 
-document.getElementById('deck').addEventListener('click', () => {
-    drawCard();
-});
-
-// Показать карту
+// Запуск drawCard по клику на колоду
 function drawCard() {
     if (unusedQuestions.length === 0) {
         resetDeck();
@@ -143,7 +140,7 @@ function resetDeck() {
     unusedQuestions = [...questions];
 }
 
-// Закрыть колоду и вернуться к стартовой странице
+// Закрыть колоду и вернуться на начальную страницу
 function closeDeck() {
     document.getElementById('card-container').style.display = 'none';
     document.querySelector('.deck-container').style.display = 'flex';
